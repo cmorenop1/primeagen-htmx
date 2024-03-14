@@ -14,7 +14,7 @@ type Templates struct {
 }
 
 type Count struct {
-	Count int
+	Value int
 }
 
 // === TYPES ===
@@ -36,7 +36,7 @@ func main() {
 	e.Renderer = newTemplate()
 
 	count := Count{
-		Count: 0,
+		Value: 0,
 	}
 
 	e.GET("/", func(c echo.Context) error {
@@ -44,7 +44,7 @@ func main() {
 	})
 
 	e.POST("/count", func(c echo.Context) error {
-		count.Count++
+		count.Value++
 		return c.Render(200, "count", count)
 	})
 

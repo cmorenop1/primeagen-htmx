@@ -18,4 +18,8 @@
         <button hx-target="#count" hx-post="/count">BUTTON</button>
     </body>
 </html>
-{{ end }} {{ define "count" }} Count: {{ .Count }} {{ end }}
+{{ end }}
+
+{{ define "count" }}
+    How many clicks? 👉 {{ .Value }} clicks
+{{ end }}
