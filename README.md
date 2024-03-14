@@ -1,2 +1,0 @@
-# primeagen-htmx
-HTMX Course
